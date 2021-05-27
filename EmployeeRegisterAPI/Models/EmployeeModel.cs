@@ -11,7 +11,7 @@ namespace EmployeeRegisterAPI.Models
     public class EmployeeModel
     {
         [Key]
-        public int EmployeeID { get; set; }
+        public int EmployeeId { get; set; }
 
         [Column(TypeName ="nvarchar(50)")]
         public string EmployeeName { get; set; }

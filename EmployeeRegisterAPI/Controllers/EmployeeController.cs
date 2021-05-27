@@ -30,7 +30,7 @@ namespace EmployeeRegisterAPI.Controllers
         {
             return await _context.Employees
                 .Select(x => new EmployeeModel() { 
-                EmployeeID = x.EmployeeID,
+                EmployeeId = x.EmployeeId,
                 EmployeeName = x.EmployeeName,
                 Occupation = x.Occupation,
                 ImageName = x.ImageName,
@@ -59,7 +59,7 @@ namespace EmployeeRegisterAPI.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutEmployeeModel(int id, [FromForm]EmployeeModel employeeModel)
         {
-            if (id != employeeModel.EmployeeID)
+            if (id != employeeModel.EmployeeId)
             {
                 return BadRequest();
             }
@@ -122,7 +122,7 @@ namespace EmployeeRegisterAPI.Controllers
 
         private bool EmployeeModelExists(int id)
         {
-            return _context.Employees.Any(e => e.EmployeeID == id);
+            return _context.Employees.Any(e => e.EmployeeId == id);
         }
 
         [NonAction]
