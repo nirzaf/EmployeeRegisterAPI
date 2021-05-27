@@ -23,7 +23,7 @@ namespace EmployeeRegisterAPI.Models
         public string ImageName { get; set; }
 
         [NotMapped]
-        public List<IFormFile> ImageFile { get; set; }
+        public IFormFile ImageFile { get; set; }
 
         [NotMapped]
         public string ImageSrc { get; set; }
