@@ -23,12 +23,10 @@ namespace EmployeeRegisterAPI.Models
         public string ImageName { get; set; }
 
         [NotMapped]
-        public IFormFile ImageFile { get; set; }
+        public List<IFormFile> ImageFile { get; set; }
 
         [NotMapped]
         public string ImageSrc { get; set; }
 
-        //Pascal(EmployeeName) -> Camel EmployeeID ->employeeID
-        //Camel(employeeName) -> Pascal
     }
 }
